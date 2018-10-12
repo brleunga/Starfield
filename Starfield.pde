@@ -36,7 +36,7 @@ class NormalParticle implements Particle
 	{
 		myX = myX + (Math.cos(angle))*(speed);
 		myY = myY + (Math.sin(angle))*(speed);
-		if (myX > 700 || myY > 700 || myX < -200 || myY < -200)
+		if (myX > 1000 || myY > 1000 || myX < -500 || myY < -500)
 		{
 			myX = myY = 250;
 		}
@@ -45,7 +45,7 @@ class NormalParticle implements Particle
 	{
 		fill(myColor,125);
 		noStroke();
-		ellipse((int)myX,(int)myY,8,8);
+		quad((int)myX,(int)myY,(int)myX+7,(int)myY+7,(int)myX,(int)myY+14,(int)myX-7,(int)myY+7);
 	}
 }
 interface Particle
@@ -69,7 +69,7 @@ class OddballParticle implements Particle
 	}
 	public void show()
 	{
-        fill(myColor,200);
+        fill(myColor);
         noStroke();
         rect((int)myX,(int)myY,50,50);
 	}
@@ -80,6 +80,6 @@ class JumboParticle extends NormalParticle
 	{
 		fill(myColor,125);
 		noStroke();
-		ellipse((int)myX,(int)myY,60,60);
+		quad((int)myX,(int)myY,(int)myX+30,(int)myY+30,(int)myX,(int)myY+60,(int)myX-30,(int)myY+30);
 	}
 }
