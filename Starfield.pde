@@ -78,7 +78,7 @@ class JumboParticle extends NormalParticle
 {
 	public void show()
 	{
-		fill(myColor,125);
+		fill(myColor);
 		noStroke();
 		quad((int)myX,(int)myY,(int)myX+30,(int)myY+30,(int)myX,(int)myY+60,(int)myX-30,(int)myY+30);
 	}
