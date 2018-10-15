@@ -43,9 +43,9 @@ class NormalParticle implements Particle
 	}
 	public void show()
 	{
-		fill(myColor,125);
+		fill(255,125);
 		noStroke();
-		quad((int)myX,(int)myY,(int)myX+7,(int)myY+7,(int)myX,(int)myY+14,(int)myX-7,(int)myY+7);
+		ellipse((int)myX,(int)myY,5,5);
 	}
 }
 interface Particle
@@ -78,8 +78,8 @@ class JumboParticle extends NormalParticle
 {
 	public void show()
 	{
-		fill(myColor);
+		fill(255,125);
 		noStroke();
-		quad((int)myX,(int)myY,(int)myX+30,(int)myY+30,(int)myX,(int)myY+60,(int)myX-30,(int)myY+30);
+		ellipse((int)myX,(int)myY,60,60);
 	}
 }
